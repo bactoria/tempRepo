@@ -8,8 +8,17 @@
   src: url('/assets/fonts/KoPubDotumMedium.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'Bactoria';
+  src: url('/assets/fonts/Bactoria.woff') format('woff');
+}
+
 .hanna {
   font-family: BM-HANNA;
+}
+
+.Bactoria {
+  font-family: Bactoria;
 }
 
 .KoPubDotumMedium {

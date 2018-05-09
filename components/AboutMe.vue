@@ -1,18 +1,17 @@
 <template>
  <div align="center">
    <div>
-     <div class="myName">Bactoria </div>
+     <router-link to="/" tag="span" class="myName">Bactoria</router-link>
 <!--     <div style="font-size: 25px">개발 블로그</div>-->
    </div>
-<div style="height: 30px">
-</div>
   <img src="~/assets/image/me2.jpg" width="200px" />
-  <br/>
 
-
+  <div class="mu">
      <a class="SNS-icons" :href="icon.link" target="_blank" v-for="icon in icons">
        <img :src="icon.src" width="30px" class="scaleUp"/>
      </a>
+  </div>
+
   </div>
 
    <!--<div class="aboutMe" @click="aboutMe"> ABOUT ME </div> <br/>-->
@@ -39,6 +38,10 @@
 
 <style lang="scss" scoped>
 
+  .mu {
+    margin-top: 20px;
+  }
+
   .SNS-icons{
     margin-left: 10px;
     margin-right: 10px;
@@ -55,9 +58,21 @@
   }
 
   .myName {
-    font-size: 35px;
+    font-size: 6rem;
+    font-family: Bactoria;
+    cursor: pointer;
   }
 
+  .asdasd {
+
+    border-bottom: 2px solid #b4e7f8;
+    box-shadow: inset 0 -7px 0 #b4e7f8;
+    transition: background .15s cubic-bezier(.33,.66,.66,1);
+
+    display: inline;
+    color: inherit;
+    cursor: pointer;
+  }
 
   .myName2 {
     font-size: 25px;

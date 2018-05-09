@@ -4,7 +4,7 @@
   <div class="category">CATEGORY</div>
   <div>
   <v-list align="center" >
-   <v-list-tile v-for="category in categories" >
+   <v-list-tile v-for="category in categories" :key="category.id">
       <v-list-tile-content style="align-items: center">
         <div class= "aboutMe" @click="findPosts(category)">
           {{category.name}}
@@ -50,7 +50,8 @@
   .aboutMe {
   &:hover {
      transform: scale(1.1);
-   }
+    color: #000000;
+  }
     font-size: 25px;
     text-align: center;
     cursor:pointer;

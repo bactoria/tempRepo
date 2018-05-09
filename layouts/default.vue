@@ -1,15 +1,14 @@
 <template>
 
   <v-app id="app">
-    <v-toolbar dark  class="hidden-sm-and-up" >
+    <v-toolbar dark class="hidden-md-and-up" >
       <v-toolbar-side-icon
         @click.native.stop = "sideNav = !sideNav"></v-toolbar-side-icon>
-      <!-- class="hidden-sm-and-up" -->
       <v-toolbar-title >
         <router-link to="/" tag="span" style="cursor: pointer">Bactoria</router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-toolbar-items class="hidden-xs-only">
+      <v-toolbar-items>
 
 
       </v-toolbar-items>
@@ -26,15 +25,17 @@
           <v-layout row wrap>
 
             <!-- 왼쪽 -->
-            <v-flex sm3 class="hidden-xs-only">
+            <v-flex sm3 class="hidden-sm-and-down">
 
               <!-- 왼쪽 메뉴 -->
               <left-menu/>
 
             </v-flex>
 
+            <v-flex sm1 class="hidden-md-and-up"/>
+
             <!-- 본문 -->
-            <v-flex sm9>
+            <v-flex sm10 md9>
 
               <!-- 라우팅 -->
               <nuxt />
@@ -42,6 +43,7 @@
             </v-flex>
 
             <!-- 오른쪽 없어짐ㅋ-->
+            <v-flex sm1 class="hidden-md-and-up"/>
 
           </v-layout>
         </section>

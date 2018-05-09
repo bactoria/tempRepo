@@ -1,11 +1,10 @@
 <template>
-<div>
+<div align="center">
 
   <section style="height: 20px;"> </section>
-
-  <v-card class="card" v-for="post in posts">
+  <v-card class="card" v-for="post in posts" :key="post.id">
    <div @click="getPost(post.id)">
-    <v-card-title class="hanna">
+    <v-card-title class="hanna post-title">
       {{post.title}}
     </v-card-title>
       <vue-markdown class="KoPubDotumMedium postContent"> {{post.content}} </vue-markdown>
