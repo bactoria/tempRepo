@@ -4,13 +4,13 @@
 }
 
 @font-face {
-  font-family: 'KoPubDotumMedium';
-  src: url('/assets/fonts/KoPubDotumMedium.woff') format('woff');
+  font-family: 'Bactoria';
+  src: url('/assets/fonts/Bactoria.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Bactoria';
-  src: url('/assets/fonts/Bactoria.woff') format('woff');
+  font-family: 'GodoM';
+  src: url('/assets/fonts/GodoM.woff') format('woff');
 }
 
 .hanna {
@@ -21,6 +21,11 @@
   font-family: Bactoria;
 }
 
-.KoPubDotumMedium {
-  font-family: KoPubDotumMedium;
+.GodoM {
+  font-family: GodoM;
+}
+
+.GodoB {
+  font-family: GodoM;
+  font-stretch: expanded;
 }

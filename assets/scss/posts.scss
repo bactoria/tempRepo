@@ -45,25 +45,15 @@
   .card {
     box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 6px, rgba(0, 0, 0, 0.3) 0px 1px 4px;
     max-width: 90%;
-    margin: 12px;
+    margin: 15px;
     transition: .15s all ease-in-out;
     background-image: url("/static/backboard.jpg");
 
     &:hover {
-      transform: scale(1.05);
+      transform: scale(1.07);
     }
     v-card-title{
-      font-size: 20px;
-    }
-    div {
-      small {
-        font-size: 10px;
-        padding: 4px;
-        align-items: center;
-      }
+      font-size: 40px;
     }
   }
 
-  .post-title {
-    font-size: 1.3rem;
-  }

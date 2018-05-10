@@ -6,9 +6,9 @@
   <v-list align="center" >
    <v-list-tile v-for="category in categories" :key="category.id">
       <v-list-tile-content style="align-items: center">
-        <div class= "aboutMe" @click="findPosts(category)">
+        <a class="aboutMe" :href="'/category/' + category.id" tag="1">
           {{category.name}}
-        </div>
+        </a>
       </v-list-tile-content>
     </v-list-tile>
   </v-list>
@@ -52,6 +52,8 @@
      transform: scale(1.1);
     color: #000000;
   }
+
+    text-decoration: none;
     font-size: 25px;
     text-align: center;
     cursor:pointer;

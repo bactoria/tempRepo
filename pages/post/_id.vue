@@ -3,8 +3,9 @@
     <span v-html="result2"></span>
   </div>-->
 
-    <div class="table">
-      <vue-markdown class="ass"> {{result}} </vue-markdown>
+    <div class="table" align="center">
+      <div class="GodoB cc">{{title}}</div>
+      <vue-markdown class="markdown GodoM"> {{result}} </vue-markdown>
     </div>
 
 </template>
@@ -20,7 +21,8 @@
     data () {
       return {
         result2: new MarkdownIt().render(this.$store.state.post.content),
-        result: this.$store.state.post.content
+        result: this.$store.state.post.content,
+        title: this.$store.state.post.title
       }
     }
 
@@ -30,15 +32,20 @@
 <style lang="scss" scoped>
 @import '../../assets/scss/font.scss';
 
-  .ass {
+  .cc {
+    font-size: 55px;
+  }
+
+  .markdown {
     padding: 20px;
-    font-size: 22px;
-    font-family: KoPubDotumMedium;
+    font-size: 25px;
+    text-align: left;
   }
 
   .table {
+
     background-color: #f7f8fb;
-    padding: 20px;
+    margin: 20px;
   }
 
 </style>

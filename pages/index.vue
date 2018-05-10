@@ -6,12 +6,6 @@
 
   <img src="../static/KakaoTalk_20180507_235451526.gif" width="50%"/>
 
-<v-card v-for="category in categories" :key="category.id" >
-  <v-card-title @click="findPosts">
-    {{category.name}}
-  </v-card-title>
-</v-card>
-
 </div>
 
 </template>

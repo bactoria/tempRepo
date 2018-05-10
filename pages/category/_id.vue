@@ -3,17 +3,18 @@
 
   <section style="height: 20px;"> </section>
   <v-card class="card" v-for="post in posts" :key="post.id">
-   <div @click="getPost(post.id)">
-    <v-card-title class="hanna post-title">
+     <a class="none_" :href="'/post/'+post.id">
+    <div class="hanna title">
       {{post.title}}
-    </v-card-title>
-      <vue-markdown class="KoPubDotumMedium postContent"> {{post.content}} </vue-markdown>
-   </div>
+    </div >
+       <div align="right" class= "GodoM" style="padding-right: 10px;">
+        {{post.createdDate.split('T')[0]}}
+       </div>
+     </a>
   </v-card>
 
 </div>
 </template>
-
 
 <script>
   import VueMarkdown from 'vue-markdown'
@@ -37,8 +38,13 @@
   @import "../../assets/scss/posts.scss";
   @import "../../assets/scss/font.scss";
 
-  .postContent {
-    margin-left: 20px;
-    max-height: 100px;
+  .none_{
+    text-decoration: none;
   }
+
+  .title {
+    font-size: 100px;
+    padding-top: 1.5rem;
+  }
+
 </style>
