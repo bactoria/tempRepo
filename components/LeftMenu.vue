@@ -1,5 +1,5 @@
 <template>
-  <div class="hanna">
+  <div class="GodoM">
     <about-me/>
     <category/>
   </div>
@@ -15,6 +15,6 @@
 
 <style lang="scss" scoped>
 
-@import '../assets/scss/font.scss';
+@import '../assets/scss/GodoM_font.scss';
 
 </style>

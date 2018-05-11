@@ -8,11 +8,6 @@
   src: url('/assets/fonts/Bactoria.woff') format('woff');
 }
 
-@font-face {
-  font-family: 'GodoM';
-  src: url('/assets/fonts/GodoM.woff') format('woff');
-}
-
 .hanna {
   font-family: BM-HANNA;
 }
@@ -21,11 +16,3 @@
   font-family: Bactoria;
 }
 
-.GodoM {
-  font-family: GodoM;
-}
-
-.GodoB {
-  font-family: GodoM;
-  font-stretch: expanded;
-}
