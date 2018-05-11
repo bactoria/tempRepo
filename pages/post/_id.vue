@@ -4,9 +4,21 @@
   </div>-->
 <div style="width: 100%;" class="root">
     <div class="table" align="center">
-      <div class="GodoB title">{{title}}</div>
-      <vue-markdown class="markdown GodoM"> {{result}} </vue-markdown>
 
+      <!-- 제목 -->
+      <div>
+        <a :href="'/category/'+post.categoryId">{{post.categoryId}}</a>
+      </div>
+      <div style="margin-bottom: 10%;">
+          <span class="GodoB PostTitle">{{post.title}}</span>
+        <!--  <span class="PostDate"> {{post.createdDate.split("T")[0]}} </span>
+        -->
+
+        <div style="border-bottom: 7px solid #aaaaaa;border-radius: 2px; width: 15%; margin: 10px"> </div>
+        </div>
+
+      <!-- 내용 -->
+        <vue-markdown class="markdown GodoM"> {{post.content}} </vue-markdown>
     </div>
 
   <!-- Disqus 댓글 -->
@@ -66,8 +78,7 @@
     data () {
       return {
         result2: new MarkdownIt().render(this.$store.state.post.content),
-        result: this.$store.state.post.content,
-        title: this.$store.state.post.title
+        post: this.$store.state.post,
       }
     }
 
@@ -75,15 +86,22 @@
 </script>
 
 <style lang="scss" scoped>
+
   .root {
-    padding-left: 7%;
+    padding-left: 5%;
     padding-right: 7%;
   }
 
-  .title {
+  .PostTitle {
     font-size: 55px;
   }
-
+  .PostDate {
+    float: right;
+    margin-top: 40px;
+    margin-right: 15px;
+    font-size: 15px;
+    font-family: GodoM;
+  }
   .markdown {
     padding: 20px;
     font-size: 25px;
@@ -93,7 +111,11 @@
   .table {
     background-image: url("/static/backboard.jpg");
     background-repeat: repeat;
+
+    border-radius: 70px;
     margin-top: 20px;
+    margin-bottom: 30px;
+    padding-top: 40px;
   }
 
   #disqust_thread {

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="root">
     <about-me/>
     <category/>
   </div>
@@ -14,6 +14,8 @@
 </script>
 
 <style lang="scss" scoped>
-
+  .root {
+    margin-left:20%;
+  }
 
 </style>

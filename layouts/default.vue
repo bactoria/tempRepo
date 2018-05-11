@@ -27,7 +27,6 @@
             <div class="blank hidden-md-and-up"></div>
 
             <!-- 공백 -->
-            <v-flex md1 />
 
             <!-- 왼쪽 -->
             <v-flex md3 class="hidden-sm-and-down" >
@@ -37,22 +36,13 @@
 
             </v-flex>
 
-            <!-- 중앙 -->
-
             <!-- 본문 -->
-
-            <!-- 공백 -->
-            <v-flex md1 />
-
-            <v-flex xs12 md6>
+            <v-flex xs12 md9>
 
               <!-- 라우팅 -->
               <nuxt />
 
             </v-flex>
-
-            <!-- 공백 -->
-            <v-flex md1 />
 
 
           </v-layout>
@@ -91,7 +81,7 @@ import SideMenu from "../components/SideMenu";
 </script>
 
 
-<style scoped>
+<style lang="scss" scoped>
 
   .blank {
     padding-top: 40px;

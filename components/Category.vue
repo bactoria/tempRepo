@@ -6,7 +6,7 @@
   <v-list align="center" >
    <v-list-tile v-for="category in categories" :key="category.id">
       <v-list-tile-content class="GodoB" style="align-items: center;">
-        <a class="categoryA"  :href="'/category/' + category.id" tag="1">
+        <a class="categoryA"  :href="'/category/' + category.id">
           {{category.name}}
         </a>
 

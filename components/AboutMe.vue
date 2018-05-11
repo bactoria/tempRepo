@@ -1,12 +1,12 @@
 <template>
  <div align="center">
    <div  class="hidden-sm-and-down">
-     <router-link to="/" tag="span" class="myName GodoB">Bactoria</router-link>
+     <a href="/" tag="span" class="myName GodoB">Bactoria</a>
 <!--     <div style="font-size: 25px">개발 블로그</div>-->
    </div>
    <div class="hidden-md-and-up GodoB myName2">Bactoria</div>
-   <img src="~/assets/image/me2.jpg" width="200px" class="hidden-sm-and-down"/>
-   <img src="~/assets/image/me2.jpg" width="130px" class="hidden-md-and-up "/>
+   <img src="/me2.jpg" width="200px" class="hidden-sm-and-down"/>
+   <img src="/me2.jpg" width="130px" class="hidden-md-and-up "/>
 
   <div class="mu">
      <a class="SNS-icons" :href="icon.link" target="_blank" v-for="icon in icons">
@@ -62,6 +62,7 @@
   .myName {
     font-size: 60px;
     cursor: pointer;
+    color: black;
   }
   .myName2 {
     font-size: 30px;

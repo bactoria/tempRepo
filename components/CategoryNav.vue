@@ -6,8 +6,9 @@
   <v-list align="center" >
    <v-list-tile v-for="category in categories" :key="category.id">
       <v-list-tile-content class="GodoB" style="align-items: center;">
-        <a class="categoryA"  :href="'/category/' + category.id" tag="1">
-          {{category.name}}
+
+        <a class="categoryA" :href="'/category/' + category.id">
+          <span >{{category.name}}</span>
         </a>
 
       </v-list-tile-content>
@@ -50,15 +51,22 @@
 
   .categoryA {
 
-    &:hover {
-      transform: scale(1.3);
-      color: #000000;
+    span {
+      text-decoration: none;
+      font-size: 15px;
+      text-align: center;
+      cursor:pointer;
+      color: #aaaaaa;
+
+
+      &:hover {
+        color: #000000;
+      }
     }
 
-    text-decoration: none;
-    font-size: 15px;
-    text-align: center;
-    cursor:pointer;
-    color: #aaaaaa;
-  }
+    &:hover {
+      transform: scale(1.3);
+    }
+
+    }
 </style>

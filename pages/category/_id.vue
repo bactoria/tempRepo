@@ -1,5 +1,5 @@
 <template>
-<div align="center">
+<div class="root" align="center">
 
   <section style="height: 20px;"> </section>
 
@@ -37,7 +37,28 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../../assets/scss/posts.scss";
+
+  .card {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 6px, rgba(0, 0, 0, 0.3) 0px 1px 4px;
+    margin: 15px;
+    transition: .15s all ease-in-out;
+    background-image: url("/static/backboard.jpg");
+    background-repeat: repeat;
+
+    &:hover {
+      transform: scale(1.07);
+    }
+
+    v-card-title{
+      font-size: 40px;
+    }
+  }
+
+  .root {
+    margin-left:10%;
+    margin-right:10%;
+
+  }
 
   .none_{
       text-decoration: none;
