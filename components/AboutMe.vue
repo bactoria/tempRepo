@@ -1,10 +1,12 @@
 <template>
  <div align="center">
-   <div>
-     <router-link to="/" tag="span" class="myName">Bactoria</router-link>
+   <div  class="hidden-sm-and-down">
+     <router-link to="/" tag="span" class="myName GodoB">Bactoria</router-link>
 <!--     <div style="font-size: 25px">개발 블로그</div>-->
    </div>
-  <img src="~/assets/image/me2.jpg" width="200px" />
+   <div class="hidden-md-and-up GodoB myName2">Bactoria</div>
+   <img src="~/assets/image/me2.jpg" width="200px" class="hidden-sm-and-down"/>
+   <img src="~/assets/image/me2.jpg" width="130px" class="hidden-md-and-up "/>
 
   <div class="mu">
      <a class="SNS-icons" :href="icon.link" target="_blank" v-for="icon in icons">
@@ -58,9 +60,13 @@
   }
 
   .myName {
-    font-size: 6rem;
-    font-family: Bactoria;
+    font-size: 60px;
     cursor: pointer;
+  }
+  .myName2 {
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 5px;
   }
 
   .asdasd {
@@ -74,9 +80,6 @@
     cursor: pointer;
   }
 
-  .myName2 {
-    font-size: 25px;
-  }
   .scaleUp {
     &:hover {
       transform: scale(1.15);

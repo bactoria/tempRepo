@@ -1,52 +1,61 @@
 <template>
 
-  <v-app id="app">
-    <v-toolbar dark class="hidden-md-and-up" >
+  <v-app style="background: white;">
+
+   <!-- 네비 -->
+    <v-navigation-drawer app fixed temporary v-model="sideNav">
+      <side-menu/>
+    </v-navigation-drawer>
+
+    <!-- 툴바 -->
+    <v-toolbar dark app class="hidden-md-and-up black">
       <v-toolbar-side-icon
         @click.native.stop = "sideNav = !sideNav"></v-toolbar-side-icon>
       <v-toolbar-title >
-        <router-link to="/" tag="span" style="cursor: pointer">Bactoria</router-link>
+        <a href="https://bactoria.me" class="GodoB" tag="span" style="cursor: pointer; color: #ffffff; text-decoration: none">Bactoria</a>
       </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-toolbar-items>
-
-
+      <v-toolbar-items >
       </v-toolbar-items>
     </v-toolbar>
 
-   <!-- <v-progress-linear :indeterminate="true"></v-progress-linear>-->
-    <main>
-      <v-content>
-        <section id="spacer">
-         <!-- <img src="../assets/image/main_top.jpg" width="100%"></img>-->
-        </section>
 
-        <section>
-          <v-layout row wrap>
+    <!-- <v-progress-linear :indeterminate="true"></v-progress-linear>-->
+    <main app>
+      <v-content>
+
+          <v-layout row wrap class="blank" style="background: white">
+            <div class="blank hidden-md-and-up"></div>
+
+            <!-- 공백 -->
+            <v-flex md1 />
 
             <!-- 왼쪽 -->
-            <v-flex sm3 class="hidden-sm-and-down">
+            <v-flex md3 class="hidden-sm-and-down" >
 
               <!-- 왼쪽 메뉴 -->
               <left-menu/>
 
             </v-flex>
 
-            <v-flex sm1 class="hidden-md-and-up"/>
+            <!-- 중앙 -->
 
             <!-- 본문 -->
-            <v-flex sm10 md9>
+
+            <!-- 공백 -->
+            <v-flex md1 />
+
+            <v-flex xs12 md6>
 
               <!-- 라우팅 -->
               <nuxt />
 
             </v-flex>
 
-            <!-- 오른쪽 없어짐ㅋ-->
-            <v-flex sm1 class="hidden-md-and-up"/>
+            <!-- 공백 -->
+            <v-flex md1 />
+
 
           </v-layout>
-        </section>
       </v-content>
 
     </main>
@@ -59,6 +68,7 @@
 import Category from '~/components/Category'
 import AboutMe from '~/components/AboutMe'
 import LeftMenu from "../components/LeftMenu";
+import SideMenu from "../components/SideMenu";
 
   export default {
     data () {
@@ -74,7 +84,8 @@ import LeftMenu from "../components/LeftMenu";
     },
     components: {
       LeftMenu,
-      Category, AboutMe
+      Category, AboutMe,
+      SideMenu
     }
   }
 </script>
@@ -82,8 +93,8 @@ import LeftMenu from "../components/LeftMenu";
 
 <style scoped>
 
-  #spacer {
-    height: 10%;
+  .blank {
+    padding-top: 40px;
   }
 
 </style>

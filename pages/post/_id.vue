@@ -2,13 +2,15 @@
   <!--<div style="background-color: #7f828b">
     <span v-html="result2"></span>
   </div>-->
-<div style="max-width: 95%">
-
+<div style="width: 100%;" class="root">
     <div class="table" align="center">
-      <div class="GodoB cc">{{title}}</div>
+      <div class="GodoB title">{{title}}</div>
       <vue-markdown class="markdown GodoM"> {{result}} </vue-markdown>
 
     </div>
+
+  <!-- Disqus 댓글 -->
+
   <div id="disqus_thread"></div>
   <script>
 
@@ -73,9 +75,12 @@
 </script>
 
 <style lang="scss" scoped>
-@import '../../assets/scss/font.scss';
+  .root {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
 
-  .cc {
+  .title {
     font-size: 55px;
   }
 
@@ -86,9 +91,13 @@
   }
 
   .table {
+    background-image: url("/static/backboard.jpg");
+    background-repeat: repeat;
+    margin-top: 20px;
+  }
 
-    background-color: #f7f8fb;
-    margin: 20px;
+  #disqust_thread {
+    margin-top: 20px;
   }
 
 </style>

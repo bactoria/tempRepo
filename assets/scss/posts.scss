@@ -44,14 +44,15 @@
 
   .card {
     box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 6px, rgba(0, 0, 0, 0.3) 0px 1px 4px;
-    max-width: 90%;
     margin: 15px;
     transition: .15s all ease-in-out;
     background-image: url("/static/backboard.jpg");
+    background-repeat: repeat;
 
     &:hover {
       transform: scale(1.07);
     }
+
     v-card-title{
       font-size: 40px;
     }

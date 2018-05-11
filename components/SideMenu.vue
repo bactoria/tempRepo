@@ -1,16 +1,19 @@
 <template>
+
   <div>
     <about-me/>
-    <category/>
+    <category-nav/>
   </div>
 </template>
 
 <script>
-  import Category from "./Category";
+  import CategoryNav from "./CategoryNav";
   import AboutMe from "./AboutMe";
+
   export default {
-      components: {Category, AboutMe}
-    }
+    components: {CategoryNav, AboutMe}
+  }
+
 </script>
 
 <style lang="scss" scoped>

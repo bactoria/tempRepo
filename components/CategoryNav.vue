@@ -43,7 +43,7 @@
   }
 
   .category {
-    font-size: 32px;
+    font-size: 20px;
     text-align: center;
     margin-top: 20px;
   }
@@ -56,7 +56,7 @@
     }
 
     text-decoration: none;
-    font-size: 25px;
+    font-size: 15px;
     text-align: center;
     cursor:pointer;
     color: #aaaaaa;
