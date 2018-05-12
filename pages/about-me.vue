@@ -1,5 +1,9 @@
 <template>
-<div>
+
+  <div>
+  <script>
+    alert('asd');
+  </script>
 
   <span>부경대학교 컴퓨터공학과</span> <br/>
   <span>1993. 05. 08</span> <br/>

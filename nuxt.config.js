@@ -12,8 +12,12 @@ module.exports = {
     title: "Bactoria's Blog",
     meta: [
       { charset: 'utf-8' },
+      { property: "fb:app_id", content: '223610565072661' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description }
+    ],
+    script: [
+      {src: '/js/facebookSDK.js'}
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/me2.jpg' },
@@ -79,6 +83,12 @@ module.exports = {
           })
         ]
       }
+    },
+    uglify: {
+      uglifyOptions: {
+        compress: false
+      },
+      cache: '/path/to/cache/dir'
     }
   }
 }

@@ -2,6 +2,7 @@
  <div align="center">
    <div  class="hidden-sm-and-down">
      <a href="/" tag="span" class="myName GodoB">Bactoria</a>
+     <router-link to="/">beta</router-link>
 <!--     <div style="font-size: 25px">개발 블로그</div>-->
    </div>
    <div class="hidden-md-and-up GodoB myName2">Bactoria</div>
@@ -12,26 +13,29 @@
      <a class="SNS-icons" :href="icon.link" target="_blank" v-for="icon in icons">
        <img :src="icon.src" width="30px" class="scaleUp"/>
      </a>
-  </div>
 
   </div>
 
    <!--<div class="aboutMe" @click="aboutMe"> ABOUT ME </div> <br/>-->
-
+ </div>
 </template>
 
 <script>
     export default {
-      data () {
+      data() {
         return {
           icons: [{
-            "name": "Github", "src" : "/GithubIcon.png", "link" : "https://github.com/bactoria"}, {
-            "name": "Facebook", "src" : "/FacebookIcon.jpg", "link" : "https://www.facebook.com/profile.php?id=100003593517742"}
+            "name": "Github", "src": "/GithubIcon.png", "link": "https://github.com/bactoria"
+          }, {
+            "name": "Facebook",
+            "src": "/FacebookIcon.jpg",
+            "link": "https://www.facebook.com/profile.php?id=100003593517742"
+          }
           ]
         }
       },
       methods: {
-        aboutMe () {
+        aboutMe() {
           this.$router.push('/about-me')
         }
       }

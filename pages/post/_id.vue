@@ -1,30 +1,59 @@
 <template>
-  <!--<div style="background-color: #7f828b">
-    <span v-html="result2"></span>
-  </div>-->
-<div style="width: 100%;" class="root">
+
+  <div style="width: 100%;" class="root">
+
     <div class="table" align="center">
 
-      <!-- 제목 -->
-      <div>
+      <!-- 카테고리 -->
+      <div align="center">
         <a :href="'/category/'+post.categoryId">{{post.categoryId}}</a>
       </div>
-      <div style="margin-bottom: 10%;">
-          <span class="GodoB PostTitle">{{post.title}}</span>
-        <!--  <span class="PostDate"> {{post.createdDate.split("T")[0]}} </span>
-        -->
 
-        <div style="border-bottom: 7px solid #aaaaaa;border-radius: 2px; width: 15%; margin: 10px"> </div>
-        </div>
 
-      <!-- 내용 -->
-        <vue-markdown class="markdown GodoM"> {{post.content}} </vue-markdown>
+      <div align="center">
+      <!-- 제목 -->
+        <span class="GodoB PostTitle">{{post.title}}</span>
+
+
+        <!-- 제목 밑 선긋기 -->
+        <div style="border-bottom: 7px solid #dddddd;border-radius: 2px; width: 10%; margin-top: 20px"> </div>
+        <div class="PostDate"> {{post.createdDate.split("T")[0]}} </div>
+
+        <!-- 날짜 -->
+      </div>
+
+
     </div>
+      <!-- 내용 -->
+      <!--  <vue-markdown :source="source" ></vue-markdown>-->
+      <vue-markdown style="text-align: left;" class="GodoM markdown" :watches="['show','html','breaks','linkify','emoji','typographer','toc']"
+                    :source="post.content" :show="show" :html="html" :breaks="breaks" :linkify="linkify"
+                    :emoji="emoji" :typographer="typographer"></vue-markdown>
 
-  <!-- Disqus 댓글 -->
 
-  <div id="disqus_thread"></div>
-  <script>
+    <!-- Facebook 좋아요 --> <!--Docs- https://developers.facebook.com/docs/plugins/like-button -->
+      <div class="fb-like"
+         :data-href="'https://bactoria.me/post/'+post.id"
+         data-layout="standard"
+         data-action="like"
+         data-show-faces="true"
+         data-share="true">
+      </div>
+
+
+
+
+
+    <!-- Facebook 댓글 --> <!--Docs- https://developers.facebook.com/docs/plugins/comments/-->
+
+    <!-- <div id="fb-root"></div>
+         <div class="fb-comments" data-href="http://localhost:3000" data-width="100%" data-numposts="5"></div>
+    -->
+
+
+    <!-- Disqus 댓글 -->
+    <div id="disqus_thread"></div>
+    <script>
 
     /**
      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -42,50 +71,52 @@
       (d.head || d.body).appendChild(s);
     })();
   </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-</div>
-
+  </div>
 </template>
-<script>
 
-  /**
-   *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-   *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
 
-  var disqus_config = function () {
-    this.page.url = "bactoria.me";  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = "1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-  };
 
-  (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document;
-    var s = d.createElement('script');
-    s.src = 'https://bactoria.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-  })();
-
-</script>
-<script>
+  <script>
   import MarkdownIt from 'markdown-it'
   import VueMarkdown from 'vue-markdown'
 
   export default {
-
-    middleware: 'post',
-    components: {VueMarkdown},
     data () {
       return {
-        result2: new MarkdownIt().render(this.$store.state.post.content),
+        //        result2: new MarkdownIt().render(this.$store.state.post.content),
         post: this.$store.state.post,
-      }
-    }
 
+        /*Markdown*/
+        show: true,
+        html: false,
+        breaks: true,
+        linkify: false,
+        emoji: true,
+        typographer: true,
+        toc: false
+      }
+    },
+    head: {
+      script: [
+        {src: '//bactoria.disqus.com/count.js', id: 'dsq-count-scr', body: true},
+        {src: '/js/main.js'},
+        {src: '/js/prism.js'},
+      ],
+      link: [
+        { rel: 'stylesheet', href: '/css/main.css' },
+        { rel: 'stylesheet', href: '/css/prism.css' }
+      ]
+    },
+    middleware: 'post',
+    components: {VueMarkdown}
   }
-</script>
+  </script>
 
 <style lang="scss" scoped>
+  @import "../../static/css/main.css";
+  @import "../../static/css/prism.css";
 
   .root {
     padding-left: 5%;
@@ -97,25 +128,26 @@
   }
   .PostDate {
     float: right;
-    margin-top: 40px;
     margin-right: 15px;
     font-size: 15px;
     font-family: GodoM;
   }
   .markdown {
-    padding: 20px;
-    font-size: 25px;
+    padding-left: 3%;
+    padding-rigjt: 3%;
+    font-size: 20px;
     text-align: left;
+    margin-bottom: 15%;
   }
 
   .table {
     background-image: url("/static/backboard.jpg");
     background-repeat: repeat;
 
-    border-radius: 70px;
+    border-radius: 20px;
     margin-top: 20px;
-    margin-bottom: 30px;
     padding-top: 40px;
+    padding-bottom: 20px;
   }
 
   #disqust_thread {

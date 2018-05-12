@@ -4,8 +4,10 @@
     <v-form ref="form" >
       <v-text-field v-model="title" :counter="20" label="Title" required></v-text-field>
       <textarea v-model="content" ></textarea>
-      <v-select v-model="category" :iztems="categories" required></v-select>
-      <span v-html="result"></span>
+      <v-select v-model="category" :items="categories" required>
+
+      </v-select>
+
     </v-form>
 
 
@@ -23,7 +25,6 @@
   import {mapGetters} from 'vuex'
 
   import axios from 'axios'
-  import MarkdownIt from 'markdown-it'
 
   export default {
     data () {
@@ -31,8 +32,7 @@
         content: '',
         title: '',
         category: [],
-        result: new MarkdownIt().render('# markdown-it rulezz! <br/> 행복을 줄 수 없 었어'),
-        options: {}
+        options: {},
       }
     },
     computed:
@@ -64,12 +64,12 @@
         let post = {
           title: this.title,
           content: this.content,
-          categoryId: this.category.id,
+          categoryId: this.category.id
         }
 
         axios.post('http://13.209.39.212:8080/api/post',post)
           .then ((res) => {
-            console.log(res);
+            alert("전송완료");
           });
 
 

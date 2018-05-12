@@ -4,14 +4,13 @@
     앙기모띠~
   </div>
 
-  <img src="../static/KakaoTalk_20180507_235451526.gif" width="50%"/>
+  <img src="../static/KakaoTalk_20180507_235451526.gif" width="40%"/>
 
 </div>
 
 </template>
 
-<script lang="scss">
-
+<script>
 
 </script>
 

@@ -7,7 +7,8 @@
 
     <a class="none_" :href="'/post/'+post.id">
       <div class="GodoB title">
-        {{post.title}} asd
+        {{post.title}} asd <a href="https://bactoria.me/post/1#disqus_thread"></a>
+
       </div >
       <div align="right" class= "GodoM" style="padding-right: 10px;">
         {{post.createdDate.split('T')[0]}}

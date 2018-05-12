@@ -1,7 +1,7 @@
 {
-  "name": "myBlog-Nuxt",
+  "name": "Bactoria",
   "version": "1.0.0",
-  "description": "My beautiful Nuxt.js project",
+  "description": "Bactoria's 개인블로그 입니다.",
   "author": "bactoria",
   "private": true,
   "scripts": {
