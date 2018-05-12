@@ -1,7 +1,7 @@
 <template>
 <div align="center" class="root">
 
-    <img src="/image/index1.jpg" width="100%"/>
+    <img src="/image/index.PNG" width="100%"/>
 
 </div>
 
@@ -15,8 +15,8 @@
 
   .root {
     margin-top: 2%;
-    margin-left: 7%;
-    margin-right: 10%;
+    margin-left: 11%;
+    margin-right: 13%;
 
   img {
     border-radius: 8px;
