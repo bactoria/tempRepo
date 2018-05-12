@@ -4,11 +4,9 @@
   <section style="height: 20px;"> </section>
 
   <v-card class="card" v-for="post in posts" :key="post.id">
-
     <a class="none_" :href="'/post/'+post.id">
       <div class="GodoB title">
-        {{post.title}} asd <a href="https://bactoria.me/post/1#disqus_thread"></a>
-
+        {{post.title}}
       </div >
       <div align="right" class= "GodoM" style="padding-right: 10px;">
         {{post.createdDate.split('T')[0]}}
@@ -19,15 +17,22 @@
 </div>
 </template>
 
+
+
+
 <script>
   import VueMarkdown from 'vue-markdown'
 
   export default {
-
+    head: {
+      link: [
+        {src: "https://unpkg.com/vuejs-paginate@0.9.0"}
+      ]
+    },
     middleware: 'posts',
     components: {VueMarkdown},
     computed: {
-      posts () { return this.$store.state.posts }
+      posts () { return this.$store.state.posts}
     },
     methods: {
       getPost (id) {
@@ -39,36 +44,40 @@
 
 <style lang="scss" scoped>
 
+  .root {
+    margin-left:10%;
+    margin-right:10%;
+  }
+
   .card {
     box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 6px, rgba(0, 0, 0, 0.3) 0px 1px 4px;
     margin: 15px;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
     transition: .15s all ease-in-out;
-    background-image: url("/static/backboard.jpg");
+    background-image: url("/static/image/backboard.jpg");
     background-repeat: repeat;
 
     &:hover {
       transform: scale(1.07);
     }
 
-    v-card-title{
-      font-size: 40px;
-    }
-  }
 
-  .root {
-    margin-left:10%;
-    margin-right:10%;
-
-  }
-
-  .none_{
+    a {
       text-decoration: none;
       cursor:pointer;
       color: black;
+
+
+      .title {
+        padding-top: 1.5rem;
+      }
+    }
   }
 
-  .title {
-    padding-top: 1.5rem;
-  }
+
+
 
 </style>

@@ -15,8 +15,6 @@
   </v-list>
 </div>
 
-
-
 </div>
 
 </template>

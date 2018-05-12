@@ -23,6 +23,7 @@
       </div>
 
 
+
     </div>
       <!-- 내용 -->
       <!--  <vue-markdown :source="source" ></vue-markdown>-->
@@ -115,9 +116,6 @@
   </script>
 
 <style lang="scss" scoped>
-  @import "../../static/css/main.css";
-  @import "../../static/css/prism.css";
-
   .root {
     padding-left: 5%;
     padding-right: 7%;
@@ -133,15 +131,21 @@
     font-family: GodoM;
   }
   .markdown {
-    padding-left: 3%;
-    padding-rigjt: 3%;
-    font-size: 20px;
+
+    font-size: 18px;
     text-align: left;
+
+    line-height: 4rem;
+
+    padding-left: 3%;
+    padding-right: 3%;
+
+    margin-top: 10%;
     margin-bottom: 15%;
   }
 
   .table {
-    background-image: url("/static/backboard.jpg");
+    background-image: url("/static/image/backboard.jpg");
     background-repeat: repeat;
 
     border-radius: 20px;

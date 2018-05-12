@@ -1,10 +1,7 @@
 <template>
-<div align="center">
-  <div style="font-size: 40px; font-family: BM-HANNA;">
-    앙기모띠~
-  </div>
+<div align="center" class="root">
 
-  <img src="../static/KakaoTalk_20180507_235451526.gif" width="40%"/>
+    <img src="/image/index1.jpg" width="100%"/>
 
 </div>
 
@@ -15,6 +12,22 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../assets/scss/font.scss";
+
+  .root {
+    margin-top: 2%;
+    margin-left: 7%;
+    margin-right: 10%;
+
+  img {
+    border-radius: 8px;
+  }
+
+
+
+
+  }
+
+
+
 
 </style>
