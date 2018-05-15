@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f3014d4-b5f6-4f10-a2fd-093e00811b3e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/components/Search.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Search.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/new-post.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/new-post.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/LinkIcon.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Search.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/csr.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,18 +27,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Search.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/components/Search.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-              <folding>
-                <element signature="n#style#0;n#v-text-field#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SideMenu.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/SideMenu.vue">
           <provider selected="true" editor-type-id="text-editor">
@@ -47,20 +36,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AboutMe.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/AboutMe.vue">
+      <file leaf-file-name="category.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/middleware/category.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-408">
-              <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+            <state relative-caret-position="255">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LinkIcon.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/LinkIcon.vue">
+      <file leaf-file-name="AboutMe.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/components/AboutMe.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+            <state relative-caret-position="238">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -1136,7 +1125,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="950" />
     <option name="width" value="979" />
     <option name="height" value="1040" />
@@ -1310,12 +1299,12 @@
       <workItem from="1526139487126" duration="10472000" />
       <workItem from="1526191847739" duration="3584000" />
       <workItem from="1526288277490" duration="1550000" />
-      <workItem from="1526312281063" duration="17296000" />
+      <workItem from="1526312281063" duration="18357000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="211473000" />
+    <option name="totallyTimeSpent" value="212534000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -1590,13 +1579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/middleware/category.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/middleware/post.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1619,13 +1601,6 @@
             <element signature="n#style#0;n#section#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#a#0;n#v-card#0;n#div#0;n#template#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scss/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="2" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -1658,13 +1633,6 @@
             <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/AboutMe.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-408">
-          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -1706,6 +1674,27 @@
           <folding>
             <element signature="n#style#0;n#v-text-field#0;n#div#0;n#template#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="2" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/middleware/category.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/AboutMe.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
