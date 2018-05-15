@@ -1,20 +1,13 @@
 <template>
  <div align="center">
    <div  class="hidden-sm-and-down">
-     <a href="/" tag="span" class="myName GodoB">Bactoria</a>
-     <router-link to="/">beta</router-link>
+     <a href="/" tag="span" class="myName GodoB" align="center">Bactoria</a>
 <!--     <div style="font-size: 25px">개발 블로그</div>-->
    </div>
    <div class="hidden-md-and-up GodoB myName2">Bactoria</div>
    <img src="/image/me2.jpg" width="200px" class="hidden-sm-and-down"/>
    <img src="/image/me2.jpg" width="130px" class="hidden-md-and-up "/>
 
-  <div class="mu">
-     <a class="SNS-icons" :href="icon.link" target="_blank" v-for="icon in icons">
-       <img :src="icon.src" width="30px" class="scaleUp"/>
-     </a>
-
-  </div>
 
    <!--<div class="aboutMe" @click="aboutMe"> ABOUT ME </div> <br/>-->
  </div>
@@ -22,18 +15,7 @@
 
 <script>
     export default {
-      data() {
-        return {
-          icons: [{
-            "name": "Github", "src": "/image/GithubIcon.png", "link": "https://github.com/bactoria"
-          }, {
-            "name": "Facebook",
-            "src": "/image/FacebookIcon.jpg",
-            "link": "https://www.facebook.com/profile.php?id=100003593517742"
-          }
-          ]
-        }
-      },
+
       methods: {
         aboutMe() {
           this.$router.push('/about-me')
@@ -44,14 +26,7 @@
 
 <style lang="scss" scoped>
 
-  .mu {
-    margin-top: 20px;
-  }
 
-  .SNS-icons{
-    margin-left: 10px;
-    margin-right: 10px;
-  }
 
   .aboutMe {
     max-width: 30%;

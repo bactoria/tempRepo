@@ -67,11 +67,10 @@
           categoryId: this.category.id
         }
 
-        axios.post('http://13.209.39.212:8080/api/post',post)
+        axios.post('http://127.0.0.1:8080/api/post',post)
           .then ((res) => {
             alert("전송완료");
           });
-
 
       }
     }

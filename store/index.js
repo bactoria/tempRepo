@@ -5,7 +5,8 @@ const store = () => new Vuex.Store({
   state: {
     posts: [],
     categories: [],
-    post: []
+    post: [],
+    csr: []
   },
   mutations: {
     add (state, payload) {
@@ -17,6 +18,9 @@ const store = () => new Vuex.Store({
     addPost (state, payload) {
       state.post = payload;
     },
+    addCSR (state, payload) {
+      state.csr = payload;
+    }
 
   },
 

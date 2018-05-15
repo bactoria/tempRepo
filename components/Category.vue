@@ -3,7 +3,7 @@
 
   <div class="category GodoB">CATEGORY</div>
   <div>
-  <v-list align="center" >
+  <v-list align="center" style="margin-left: 0px;">
    <v-list-tile v-for="category in categories" :key="category.id">
       <v-list-tile-content class="GodoB" style="align-items: center;">
         <a class="categoryA"  :href="'/category/' + category.id">
@@ -38,10 +38,6 @@
 </script>
 
 <style lang="scss" scoped>
-
-  .center{
-    text-align: center;
-  }
 
   .category {
     font-size: 32px;

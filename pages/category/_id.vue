@@ -24,15 +24,10 @@
   import VueMarkdown from 'vue-markdown'
 
   export default {
-    head: {
-      link: [
-        {src: "https://unpkg.com/vuejs-paginate@0.9.0"}
-      ]
-    },
     middleware: 'posts',
     components: {VueMarkdown},
     computed: {
-      posts () { return this.$store.state.posts}
+      posts () { return this.$store.state.posts.content}
     },
     methods: {
       getPost (id) {

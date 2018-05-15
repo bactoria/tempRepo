@@ -9,7 +9,7 @@
         <a :href="'/category/'+post.categoryId">{{post.categoryId}}</a>
       </div>
 
-
+      <a href="http://bactoria.com/bar.html#disqus_thread">Link</a>
       <div align="center">
       <!-- 제목 -->
         <span class="GodoB PostTitle">{{post.title}}</span>
@@ -17,6 +17,7 @@
 
         <!-- 제목 밑 선긋기 -->
         <div style="border-bottom: 7px solid #dddddd;border-radius: 2px; width: 10%; margin-top: 20px"> </div>
+
         <div class="PostDate"> {{post.createdDate.split("T")[0]}} </div>
 
         <!-- 날짜 -->
@@ -25,12 +26,15 @@
 
 
     </div>
+
+    <article>
       <!-- 내용 -->
-      <!--  <vue-markdown :source="source" ></vue-markdown>-->
+      <a href="bactoria.me#disqus_thread">d</a>
+
       <vue-markdown style="text-align: left;" class="GodoM markdown" :watches="['show','html','breaks','linkify','emoji','typographer','toc']"
                     :source="post.content" :show="show" :html="html" :breaks="breaks" :linkify="linkify"
                     :emoji="emoji" :typographer="typographer"></vue-markdown>
-
+    </article>
 
     <!-- Facebook 좋아요 --> <!--Docs- https://developers.facebook.com/docs/plugins/like-button -->
       <div class="fb-like"
@@ -84,6 +88,17 @@
   import VueMarkdown from 'vue-markdown'
 
   export default {
+    head: {
+      script: [
+        {src: 'https://bactoria.disqus.com/count.js', id: 'dsq-count-scr', body: true},
+        {src: '/js/main.js'},
+        {src: '/js/prism.js'},
+      ],
+      link: [
+        { rel: 'stylesheet', href: '/css/main.css' },
+        { rel: 'stylesheet', href: '/css/prism.css' }
+      ]
+    },
     data () {
       return {
         //        result2: new MarkdownIt().render(this.$store.state.post.content),
@@ -98,17 +113,6 @@
         typographer: true,
         toc: false
       }
-    },
-    head: {
-      script: [
-        {src: '//bactoria.disqus.com/count.js', id: 'dsq-count-scr', body: true},
-        {src: '/js/main.js'},
-        {src: '/js/prism.js'},
-      ],
-      link: [
-        { rel: 'stylesheet', href: '/css/main.css' },
-        { rel: 'stylesheet', href: '/css/prism.css' }
-      ]
     },
     middleware: 'post',
     components: {VueMarkdown}
@@ -130,12 +134,14 @@
     font-size: 15px;
     font-family: GodoM;
   }
+
+
   .markdown {
 
     font-size: 18px;
     text-align: left;
 
-    line-height: 4rem;
+    line-height: 3rem;
 
     padding-left: 3%;
     padding-right: 3%;
